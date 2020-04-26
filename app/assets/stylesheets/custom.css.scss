@@ -1,5 +1,31 @@
 @import 'bootstrap/dist/css/bootstrap';
 
 .navbar {
-  background-color: #FDF6EA !important; 
+  background-color: black !important;
+}
+
+.nav-link, .navbar-brand{
+  color: white !important;
+}
+
+#home-page {
+  background-image: asset-url("background-logo.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 2rem;
+}
+
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+#sticky-footer {
+  flex-shrink: none;
 }
