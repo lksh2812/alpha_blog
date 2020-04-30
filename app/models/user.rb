@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  before_save :downcase_email
+
   validates :name, presence: true, 
                    uniqueness: { case_sensitive: false }, 
                    length: { minimum: 3, maximum: 25 }
@@ -11,4 +13,10 @@ class User < ApplicationRecord
                     format: { with: VALID_EMAIL_REGEX }
 
   has_many :articles
+
+  private
+
+  def downcase_email
+    self.email = email.downcase
+  end
 end
